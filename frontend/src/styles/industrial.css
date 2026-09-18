@@ -1,0 +1,531 @@
+/* ==========================================================================
+   Context2HMI — Schneider Industrial HMI Design System
+   Pure CSS Design Token & Component Specification (No External Tailwind Required)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --bg-dark: #06090e;
+  --bg-dark-secondary: #0a0e17;
+  --bg-card: #0e1526;
+  --bg-card-hover: #131c33;
+  --bg-input: #05080f;
+  --border-color: #1e293b;
+  --border-highlight: #2b3952;
+  --border-cyan: #0284c7;
+  
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-subtle: #64748b;
+
+  --accent-schneider: #00e676;
+  --accent-blue: #3b82f6;
+  --accent-cyan: #06b6d4;
+  --accent-amber: #f59e0b;
+  --accent-red: #ef4444;
+  --accent-red-bg: rgba(239, 68, 68, 0.15);
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Chakra Petch', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* App Outer Shell */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-dark);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.04) 0%, transparent 60%),
+    radial-gradient(circle at 100% 100%, rgba(0, 230, 118, 0.03) 0%, transparent 50%);
+}
+
+/* Header Navbar */
+.hmi-header {
+  background-color: #0f141c;
+  border-bottom: 1px solid var(--border-color);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hmi-brand-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hmi-brand-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin-top: 2px;
+}
+
+/* Prompt Container */
+.prompt-container {
+  background-color: #0e121a;
+  border-bottom: 1px solid var(--border-color);
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.prompt-input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.prompt-input {
+  width: 100%;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 10px 40px 10px 38px;
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.prompt-input:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Scenario Quick Buttons */
+.scenario-btn {
+  background-color: #1e293b;
+  color: #e2e8f0;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.scenario-btn:hover {
+  background-color: #334155;
+  color: #ffffff;
+  border-color: #475569;
+}
+
+.scenario-btn-danger {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  border: 1px solid #ef4444;
+}
+
+.scenario-btn-danger:hover {
+  background-color: rgba(239, 68, 68, 0.4);
+  color: #ffffff;
+}
+
+/* Primary Action Buttons */
+.btn-primary {
+  background-color: #059669;
+  color: #ffffff;
+  border: 1px solid #10b981;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #10b981;
+}
+
+.btn-secondary {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #334155;
+  color: #ffffff;
+}
+
+/* Pipeline Horizontal Bar */
+.pipeline-bar {
+  background-color: #090c10;
+  border-bottom: 1px solid var(--border-color);
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 12px;
+}
+
+.pipeline-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.pipeline-step-active {
+  border-color: var(--accent-blue);
+  color: #ffffff;
+}
+
+/* Toast Banner */
+.toast-banner {
+  background-color: #451a03;
+  border-bottom: 1px solid #b45309;
+  color: #fef3c7;
+  padding: 8px 20px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Main Grid Layout Modes */
+.grid-desktop {
+  display: grid;
+  grid-template-columns: 240px 1fr 340px;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.grid-tablet {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.grid-mobile {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 16px;
+  width: 100%;
+}
+
+/* HMI Widget Grid (Center Workspace) */
+.hmi-render-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+/* HMI Widget Container Card */
+.hmi-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  transition: border-color 0.2s;
+  min-width: 0;
+}
+
+.hmi-card:hover {
+  border-color: var(--border-highlight);
+}
+
+/* Provenance Collapsible Box */
+.provenance-box {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 8px;
+  padding-top: 8px;
+}
+
+.provenance-toggle {
+  background: none;
+  border: none;
+  color: var(--text-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 0;
+}
+
+.provenance-toggle:hover {
+  color: var(--text-muted);
+}
+
+.provenance-content {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Safety Rejection View */
+.rejection-box {
+  background-color: rgba(69, 10, 10, 0.9);
+  border: 2px solid var(--accent-red);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(239, 68, 68, 0.2);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090c10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* ==========================================================================
+   SCADA Real-Time Animation System
+   ========================================================================== */
+@keyframes scadaFlow {
+  0% { stroke-dashoffset: 24; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes scadaSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes scadaBoxMove {
+  0% { transform: translateX(0px); opacity: 0.2; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateX(320px); opacity: 0.2; }
+}
+
+@keyframes scadaPiston {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(14px); }
+}
+
+@keyframes scadaBeaconPulse {
+  0%, 100% { opacity: 1; filter: drop-shadow(0 0 6px rgba(0, 230, 118, 0.8)); }
+  50% { opacity: 0.4; filter: drop-shadow(0 0 1px rgba(0, 230, 118, 0.2)); }
+}
+
+@keyframes scadaAlarmFlash {
+  0%, 100% { opacity: 1; fill: #ef4444; filter: drop-shadow(0 0 10px #ef4444); }
+  50% { opacity: 0.3; fill: #7f1d1d; filter: none; }
+}
+
+.scada-pipe-flow {
+  stroke-dasharray: 22 12;
+  animation: scadaFlow 0.5s linear infinite;
+  filter: drop-shadow(0 0 8px #00f3ff) drop-shadow(0 0 14px rgba(0, 243, 255, 0.8));
+}
+
+.scada-pipe-flow-cyan {
+  stroke-dasharray: 22 12;
+  animation: scadaFlow 0.5s linear infinite;
+  filter: drop-shadow(0 0 10px #00f3ff) drop-shadow(0 0 16px rgba(0, 243, 255, 0.9));
+}
+
+.scada-pipe-flow-emerald {
+  stroke-dasharray: 22 12;
+  animation: scadaFlow 0.5s linear infinite;
+  filter: drop-shadow(0 0 10px #00e676) drop-shadow(0 0 16px rgba(0, 230, 118, 0.9));
+}
+
+.scada-pipe-flow-blue {
+  stroke-dasharray: 22 12;
+  animation: scadaFlow 0.5s linear infinite;
+  filter: drop-shadow(0 0 10px #38bdf8) drop-shadow(0 0 16px rgba(56, 189, 248, 0.9));
+}
+
+.scada-spin {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: scadaSpin 1.2s linear infinite;
+}
+
+.scada-box-animated {
+  animation: scadaBoxMove 3.5s linear infinite;
+}
+
+.scada-piston-animated {
+  animation: scadaPiston 2.0s ease-in-out infinite;
+}
+
+.scada-beacon-active {
+  animation: scadaBeaconPulse 1.5s ease-in-out infinite;
+}
+
+.scada-alarm-flash {
+  animation: scadaAlarmFlash 0.8s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   WinCC PLC AI Assistant Drawer & Predictive Maintenance Component Styling
+   ========================================================================== */
+.plc-assistant-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 420px;
+  max-width: 100vw;
+  background-color: #090d16;
+  border-left: 1px solid #1e293b;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-sans);
+}
+
+.plc-assistant-header {
+  background-color: #0e1526;
+  border-bottom: 1px solid #1e293b;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.plc-assistant-metrics {
+  background-color: #05080f;
+  border-bottom: 1px solid #1e293b;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.plc-assistant-chat-body {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.plc-assistant-pill-bar {
+  background-color: #070a12;
+  border-top: 1px solid #1e293b;
+  padding: 8px 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.plc-assistant-input-bar {
+  background-color: #0e1526;
+  border-top: 1px solid #1e293b;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Predictive Maintenance Widget Styling */
+.predictive-widget-card {
+  background-color: #0b101d;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.predictive-widget-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.predictive-metric-box {
+  background-color: #05080f;
+  border: 1px solid #1e293b;
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+

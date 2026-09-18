@@ -1,0 +1,46 @@
+[
+  {
+    "id": "High_Temperature",
+    "name": "Line High Temperature Alarm",
+    "priority": "Critical",
+    "severity": "High",
+    "condition": "trigger > 90.0",
+    "trigger_val": 90.0,
+    "source": "Temperature_PV",
+    "asset": "Sensors",
+    "message": "Packaging line ambient temperature exceeded safety threshold of 90°C!"
+  },
+  {
+    "id": "Low_Pressure",
+    "name": "Pneumatic Low Pressure Alarm",
+    "priority": "Warning",
+    "severity": "Medium",
+    "condition": "trigger < 1.0",
+    "trigger_val": 1.0,
+    "source": "Pressure_PV",
+    "asset": "Sensors",
+    "message": "Main supply pressure dropped below minimum 1.0 bar threshold."
+  },
+  {
+    "id": "Motor_Trip",
+    "name": "Motor 1 Thermal Overload Trip",
+    "priority": "High",
+    "severity": "High",
+    "condition": "trigger == true",
+    "trigger_val": true,
+    "source": "Motor_1_Trip",
+    "asset": "Motor_1",
+    "message": "Conveyor Motor 1 tripped due to overload or thermal protection!"
+  },
+  {
+    "id": "Conveyor_OverSpeed",
+    "name": "Conveyor OverSpeed Alarm",
+    "priority": "Warning",
+    "severity": "Medium",
+    "condition": "trigger > 45.0",
+    "trigger_val": 45.0,
+    "source": "Conveyor_Speed_PV",
+    "asset": "Conveyor_A",
+    "message": "Conveyor linear speed exceeds recommended limit of 45 m/s."
+  }
+]

@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Build output
+dist/
+build/
+
+# Environment & local files
+.env
+.env.local
+.vscode/
+.idea/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

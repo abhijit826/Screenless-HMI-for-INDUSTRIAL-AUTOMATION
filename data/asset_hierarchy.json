@@ -1,0 +1,45 @@
+{
+  "id": "Plant",
+  "name": "Schneider Automation Plant",
+  "type": "Enterprise",
+  "children": [
+    {
+      "id": "Packaging_Line_1",
+      "name": "Packaging Line 1",
+      "type": "Area",
+      "children": [
+        {
+          "id": "Conveyor_A",
+          "name": "Conveyor Belt A",
+          "type": "EquipmentModule",
+          "children": [
+            {
+              "id": "Motor_1",
+              "name": "Drive Motor 1",
+              "type": "ControlModule",
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "Feed_Pump_101",
+          "name": "Material Feed Pump 101",
+          "type": "EquipmentModule",
+          "children": []
+        },
+        {
+          "id": "Packaging_Unit",
+          "name": "Automated Sealing & Packaging Unit",
+          "type": "EquipmentModule",
+          "children": []
+        },
+        {
+          "id": "Sensors",
+          "name": "Environmental & Process Sensor Suite",
+          "type": "Instrumentation",
+          "children": []
+        }
+      ]
+    }
+  ]
+}

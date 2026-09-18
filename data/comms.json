@@ -1,0 +1,29 @@
+[
+  {
+    "id": "PLC1",
+    "name": "Schneider Modicon M580 PLC",
+    "protocol": "Modbus TCP",
+    "address": "10.10.1.20",
+    "port": 502,
+    "status": "Online",
+    "linked_assets": ["Packaging_Line_1", "Conveyor_A", "Feed_Pump_101", "Packaging_Unit"]
+  },
+  {
+    "id": "VFD1",
+    "name": "Altivar Process ATV630 VFD",
+    "protocol": "EtherNet/IP",
+    "address": "10.10.1.30",
+    "port": 44818,
+    "status": "Online",
+    "linked_assets": ["Motor_1"]
+  },
+  {
+    "id": "SCADA",
+    "name": "EcoStruxure Operator Terminal Server",
+    "protocol": "OPC UA",
+    "address": "opc.tcp://10.10.1.100:4840",
+    "port": 4840,
+    "status": "Connected",
+    "linked_assets": ["Plant"]
+  }
+]

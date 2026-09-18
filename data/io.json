@@ -1,0 +1,58 @@
+[
+  {
+    "id": "IO_DI_01",
+    "name": "DI Emergency Stop",
+    "type": "Digital Input",
+    "channel": "DI_01",
+    "module": "PLC1_Rack0_Slot1",
+    "bound_tag": "Emergency_Stop"
+  },
+  {
+    "id": "IO_DI_02",
+    "name": "DI Door Switch",
+    "type": "Digital Input",
+    "channel": "DI_02",
+    "module": "PLC1_Rack0_Slot1",
+    "bound_tag": "Door_Switch"
+  },
+  {
+    "id": "IO_AI_01",
+    "name": "AI Pressure Sensor",
+    "type": "Analog Input",
+    "channel": "AI_01",
+    "module": "PLC1_Rack0_Slot2",
+    "bound_tag": "Pressure_PV"
+  },
+  {
+    "id": "IO_AI_02",
+    "name": "AI Temperature Sensor",
+    "type": "Analog Input",
+    "channel": "AI_02",
+    "module": "PLC1_Rack0_Slot2",
+    "bound_tag": "Temperature_PV"
+  },
+  {
+    "id": "IO_DO_01",
+    "name": "DO Motor Start Relay",
+    "type": "Digital Output",
+    "channel": "DO_01",
+    "module": "PLC1_Rack0_Slot3",
+    "bound_tag": "Motor_1_Start"
+  },
+  {
+    "id": "IO_DO_02",
+    "name": "DO Alarm Horn",
+    "type": "Digital Output",
+    "channel": "DO_02",
+    "module": "PLC1_Rack0_Slot3",
+    "bound_tag": "Motor_1_Trip"
+  },
+  {
+    "id": "IO_AO_01",
+    "name": "AO Conveyor VFD Speed Target",
+    "type": "Analog Output",
+    "channel": "AO_01",
+    "module": "PLC1_Rack0_Slot4",
+    "bound_tag": "Conveyor_Speed_SP"
+  }
+]

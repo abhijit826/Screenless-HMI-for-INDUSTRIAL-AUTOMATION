@@ -1,0 +1,20 @@
+[
+  {
+    "id": "DOC_01",
+    "asset": "Motor_1",
+    "title": "Motor 1 Operational Operating Procedure",
+    "content": "Motor 1 drives Conveyor A. Motor overload should stop the conveyor immediately. Temperature above 90 °C requires immediate operator attention."
+  },
+  {
+    "id": "DOC_02",
+    "asset": "Conveyor_A",
+    "title": "Conveyor Belt Safety Rules",
+    "content": "Ensure door interlock Switch Door_Switch is closed before starting Conveyor A. Maximum speed setpoint is 50 m/s."
+  },
+  {
+    "id": "DOC_03",
+    "asset": "Feed_Pump_101",
+    "title": "Feed Pump Dry Run Warning",
+    "content": "Tank Level below 10% will trigger dry-run interlock for Feed Pump 101."
+  }
+]

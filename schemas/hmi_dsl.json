@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Context2HMI DSL Schema",
+  "type": "object",
+  "required": ["screen", "title", "layout", "widgets"],
+  "properties": {
+    "screen": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "layout": {
+      "type": "string",
+      "enum": ["responsive", "grid", "single_column"]
+    },
+    "widgets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type"],
+        "properties": {
+          "id": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": [
+              "status",
+              "analog",
+              "gauge",
+              "trend",
+              "alarm_banner",
+              "alarm_list",
+              "equipment_graphic",
+              "command_button",
+              "setpoint",
+              "navigation",
+              "diagnostic",
+              "kpi"
+            ]
+          },
+          "tag": { "type": "string" },
+          "alarm": { "type": "string" },
+          "asset": { "type": "string" },
+          "stateTag": { "type": "string" },
+          "title": { "type": "string" },
+          "unit": { "type": "string" },
+          "window": { "type": "string" },
+          "label": { "type": "string" },
+          "min": { "type": "number" },
+          "max": { "type": "number" },
+          "step": { "type": "number" }
+        }
+      }
+    },
+    "navigation": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}
