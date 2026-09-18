@@ -230,3 +230,4 @@ Developed for industrial automation research and screenless SCADA dynamic runtim
 
 - **Author**: [Abhijit](https://github.com/abhijit826)
 - **Repository**: [Screenless-HMI-for-INDUSTRIAL-AUTOMATION](https://github.com/abhijit826/Screenless-HMI-for-INDUSTRIAL-AUTOMATION)
+- **DEMO-LINK**: [Demo-Video](https://youtu.be/bI3vXaThpH4)
