@@ -11,7 +11,7 @@ from validator import HmiValidator
 from composer import ScreenComposer
 from simulator import MachineSimulator
 
-class TestContext2HMIBackend(unittest.TestCase):
+class TestScreenlessHMIBackend(unittest.TestCase):
 
     def setUp(self):
         data_dir = os.path.join(os.path.dirname(__file__), "..", "data")

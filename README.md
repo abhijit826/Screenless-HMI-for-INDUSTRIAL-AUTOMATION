@@ -1,4 +1,4 @@
-# 🏭 Screenless HMI for Industrial Automation (Context2HMI)
+# 🏭 Screenless HMI for Industrial Automation (SCREENLESS-HMI)
 
 > **"The screen is a verified query on the machine, not a static file you maintain."**
 
@@ -8,7 +8,7 @@
 [![React](https://img.shields.io/badge/Frontend-React%2018-61DAFB.svg)](https://react.dev/)
 [![ISA-95 Compliant](https://img.shields.io/badge/Standard-ISA--95-orange.svg)](https://www.isa.org/)
 
-**Screenless HMI (Context2HMI)** is an AI-driven, deterministic dynamic runtime HMI architecture engineered for next-generation Schneider Electric industrial automation. It eliminates the need for manual SCADA screen engineering by dynamically compiling safety-validated, context-aware graphical interfaces and executing machine control commands directly from natural language prompts and live machine state graph models.
+**SCREENLESS-HMI** is an AI-driven, deterministic dynamic runtime HMI architecture engineered for next-generation Schneider Electric industrial automation. It eliminates the need for manual SCADA screen engineering by dynamically compiling safety-validated, context-aware graphical interfaces and executing machine control commands directly from natural language prompts and live machine state graph models.
 
 ---
 

@@ -18,7 +18,7 @@ from demo_scenarios import DEMO_PROMPTS
 
 # Initialize App
 app = FastAPI(
-    title="Context2HMI Backend API",
+    title="SCREENLESS-HMI Backend API",
     description="Dynamic Screen at Runtime for Visualization & Control of Machine via HMI",
     version="1.0.0"
 )
@@ -57,16 +57,16 @@ async def simulator_background_task():
 
 @app.on_event("startup")
 async def startup_event():
-    print("[Context2HMI] Initializing Machine Context Graph...")
+    print("[SCREENLESS-HMI] Initializing Machine Context Graph...")
     context_graph.load_and_build()
-    print(f"[Context2HMI] Loaded {len(context_graph.tags)} tags, {len(context_graph.assets)} assets.")
+    print(f"[SCREENLESS-HMI] Loaded {len(context_graph.tags)} tags, {len(context_graph.assets)} assets.")
     asyncio.create_task(simulator_background_task())
 
 @app.get("/health")
 def health_check():
     return {
         "status": "online",
-        "system": "Context2HMI",
+        "system": "SCREENLESS-HMI",
         "machine": "Packaging Line 1",
         "nodes": context_graph.graph.number_of_nodes(),
         "edges": context_graph.graph.number_of_edges(),
@@ -95,7 +95,7 @@ def get_demo_scenarios():
 @app.post("/prompt")
 def process_operator_prompt(req: PromptRequestModel):
     """
-    Main Context2HMI Pipeline:
+    Main SCREENLESS-HMI Pipeline:
     1. Deterministic Entity Resolution against Machine Context Graph
     2. AI Screen Planner proposes HMI DSL
     3. Deterministic Safety Gate Validator inspects proposed DSL

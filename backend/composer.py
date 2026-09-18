@@ -6,7 +6,7 @@ from models import HmiDslModel, ResolutionResultModel
 from context_graph import MachineContextGraph
 
 SYSTEM_PROMPT = """
-You are the Context2HMI AI Screen Planner for Schneider Electric Industrial Automation.
+You are the SCREENLESS-HMI AI Screen Planner for Schneider Electric Industrial Automation.
 Your job is to generate a dynamic HMI DSL JSON specification based on the machine context, operator prompt, and live state.
 
 CRITICAL GUARDED PERMISSION & SAFETY RULES:

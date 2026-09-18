@@ -1,4 +1,4 @@
-# 🎬 Video Presentation Script: Screenless HMI for Industrial Automation (Context2HMI)
+# 🎬 Video Presentation Script: Screenless HMI for Industrial Automation (SCREENLESS-HMI)
 
 > **Total Estimated Duration**: ~4 to 5 minutes  
 > **Key Message**: *"The screen is a verified query on the machine, not a static file you maintain."*
@@ -26,10 +26,10 @@
 ### 🟢 SECTION 1: Introduction & The Problem (0:00 - 0:30)
 
 **Visual On-Screen**:
-Show the full **Context2HMI Dashboard** with animated cyan and emerald fluid lines flowing across the SCADA schematic.
+Show the full **SCREENLESS-HMI Dashboard** with animated cyan and emerald fluid lines flowing across the SCADA schematic.
 
 **Voiceover Script**:
-> *"Welcome! Today we are presenting **Context2HMI — The Screenless HMI for Industrial Automation**.*  
+> *"Welcome! Today we are presenting **SCREENLESS-HMI — The Screenless HMI for Industrial Automation**.*  
 >
 > *In traditional manufacturing, building HMI screens requires hundreds of hours of manual graphic design, static tag linking, and costly re-engineering whenever a machine or line changes.*  
 >
@@ -43,7 +43,7 @@ Show the full **Context2HMI Dashboard** with animated cyan and emerald fluid lin
 Show the Architecture Flowchart or zoom into the **"AI PROPOSES. DETERMINISTIC VALIDATOR DECIDES."** header banner.
 
 **Voiceover Script**:
-> *"Before rendering any visual layout or sending a control command, Context2HMI passes every request through a **Machine Context Graph** built directly from engineering artifacts like `tags.json`, `io.json`, and `asset_hierarchy.json`.*  
+> *"Before rendering any visual layout or sending a control command, SCREENLESS-HMI passes every request through a **Machine Context Graph** built directly from engineering artifacts like `tags.json`, `io.json`, and `asset_hierarchy.json`.*  
 >
 > *Here is the critical rule: **The AI LLM NEVER directly controls a machine and NEVER writes executable UI code.** The AI proposes an HMI specification in JSON, but our **11-Rule Deterministic Safety Engine** evaluates every single tag binding.*  
 >
@@ -131,7 +131,7 @@ Pan smoothly across the **5 Process Panels** on the main dashboard screen:
 Return to the full, active SCADA HMI dashboard with synchronized WebSockets and green system status indicator.
 
 **Voiceover Script**:
-> *"To summarize: **Context2HMI** delivers:
+> *"To summarize: **SCREENLESS-HMI** delivers:
 > 1. Zero static screen engineering.
 > 2. 100% deterministic safety guarantees.
 > 3. ISA-95 compliant machine graph model.

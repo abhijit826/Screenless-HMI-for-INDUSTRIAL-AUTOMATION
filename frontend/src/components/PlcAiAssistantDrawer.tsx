@@ -419,7 +419,7 @@ export const PlcAiAssistantDrawer: React.FC<PlcAiAssistantDrawerProps> = ({
                     ONLINE
                   </span>
                 </div>
-                <div className="text-[11px] text-slate-400 font-mono">Siemens PLC &amp; Context2HMI Bridge</div>
+                <div className="text-[11px] text-slate-400 font-mono">Siemens PLC &amp; SCREENLESS-HMI Bridge</div>
               </div>
             </div>
             <button

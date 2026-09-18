@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Context2HMI DSL Schema",
+  "title": "SCREENLESS-HMI DSL Schema",
   "type": "object",
   "required": ["screen", "title", "layout", "widgets"],
   "properties": {

@@ -40,7 +40,7 @@ export const HmiShell: React.FC<HmiShellProps> = ({
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <h1 style={{ fontSize: '1rem', fontWeight: 700, letterSpacing: '-0.02em', color: '#ffffff', fontFamily: 'var(--font-heading)', margin: 0 }}>
-              Context2HMI
+              SCREENLESS-HMI
             </h1>
             <span style={{ fontSize: '10px', padding: '2px 6px', borderRadius: '4px', backgroundColor: '#0f172a', color: '#60a5fa', border: '1px solid #1e3a8a', fontFamily: 'var(--font-mono)' }}>
               SCHNEIDER PROTOTYPE
